@@ -4,7 +4,9 @@
     <title>Login</title>
 </head>
 <body>
-    <div class="container mt-50">
+  <%- include('partials/nav') %>
+    <div class="container mt-4">
+    
     <form action="/user/login" method="post">
         <div class="mb-3">
           <label for="email" class="form-label">Email address</label>
