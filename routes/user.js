@@ -29,12 +29,9 @@ router.post('/signup',async (req,res)=>{
 router.post('/login', async (req,res)=>{
     const {email,password} = req.body;
 
-    const user = await User.findOne({email});
-    if(!user) throw new Error("User not found");
-
-    if(user.password == password){
-        return res.redirect('/');
-    }
+    const user = await User.matchPassword(email,password);
+    console.log(user);
+    return res.redirect('/');
 })
 
 
