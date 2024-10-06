@@ -22,7 +22,7 @@ const userSchema = new mongoose.Schema({
     },
     profileImageURL : {
         type : String,
-        default : 'images/user.png'
+        default : '/images/user.png'
     },
     role : {
         type : String,
